@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Books</h1>
+  <br />
+  <br />
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of bookss">
+        <th scope="row">{{ bookss.book_id }}</th>
+        <td>{{ bookss.title }}</td>
+        <td>{{ bookss.first_name }}</td>
+        <td>
+          <a href="#" [routerLink]="['/books/', bookss.book_id, 'view']" class="btn btn-info">View</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

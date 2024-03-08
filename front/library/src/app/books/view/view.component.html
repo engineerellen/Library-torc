@@ -1,0 +1,43 @@
+<div class="container">
+    <h1>View course</h1>
+
+    <a href="#" routerLink="/books/index" class="btn btn-primary">Back</a>
+    <br />
+    <br />
+    <form [formGroup]="form"  >
+    <div>
+        <strong>ID:</strong>
+        <p>{{ books.book_id }}</p>
+    </div>
+
+    <div>
+        <strong><Title></Title>:</strong>
+        <p>{{ books.title }}</p>
+    </div>
+    <div>
+        <strong>Author:</strong>
+        <p>{{ books.last_name }} , {{ books.first_name}}</p>
+    </div>
+    <div>
+        <strong>Type:</strong>
+        <p>{{ books.type }} </p>
+    </div>
+    <div>
+        <strong>ISBN:</strong>
+        <p>{{ books.isbn }} </p>
+    </div>
+    <div>
+        <strong>Category:</strong>
+        <p>{{ books.category }} </p>
+    </div>
+    <div>
+        <strong>Category:</strong>
+        <p>{{ books.category }} </p>
+    </div>
+    <div>
+        <strong>Available Copies:</strong>
+        <p>{{ books.copies_in_use }} /{{ books.total_copies }}</p>
+    </div>
+    </form>
+    <br />
+</div>
