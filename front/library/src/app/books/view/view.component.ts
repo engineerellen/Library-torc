@@ -10,7 +10,7 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 })
 export class ViewComponent implements OnInit {
      
-  id!: string;
+  id!: number;
   books!: books;
   form!: FormGroup;
  
@@ -22,7 +22,7 @@ export class ViewComponent implements OnInit {
     
  
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['Id'];
+    this.id = this.route.snapshot.params['book_id'];
         
     this.booksService.find(this.books).subscribe((data: books)=>{
       this.books = data;

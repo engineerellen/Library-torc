@@ -4,9 +4,9 @@ import { IndexComponent } from './index/index.component';
 import { ViewComponent } from './view/view.component';
   
 const routes: Routes = [
-  { path: 'books', redirectTo: 'books/index', pathMatch: 'full'},
-  { path: 'books/index', component: IndexComponent },
-  { path: 'books/:Id/view', component: ViewComponent }
+  { path: 'Books', redirectTo: 'Books/index', pathMatch: 'full'},
+  { path: 'Books/index', component: IndexComponent },
+  { path: 'Books/:book_id/view', component: ViewComponent }
 ];
   
 @NgModule({

@@ -8,16 +8,23 @@
         <th scope="col">#</th>
         <th scope="col">Title</th>
         <th scope="col">Author</th>
-        <th scope="col"></th>
+        <th scope="col">ISBN</th>
+        <th scope="col">Type</th>
+        <th scope="col">Category</th>
+        <th scope="col">Available Copies:</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let book of bookss">
-        <th scope="row">{{ bookss.book_id }}</th>
-        <td>{{ bookss.title }}</td>
-        <td>{{ bookss.first_name }}</td>
+        <th scope="row">{{ book.book_id }}</th>
+        <td>{{ book.title }}</td>
+        <td>{{ book.last_name }},{{ book.first_name }}</td>
+        <td>{{ book.isbn }}</td>
+        <td>{{ book.type }}</td>
+        <td>{{ book.category }}</td>
+        <td>{{ book.copies_in_use }} /{{ book.total_copies }}</td>
         <td>
-          <a href="#" [routerLink]="['/books/', bookss.book_id, 'view']" class="btn btn-info">View</a>
+          <a href="#" [routerLink]="['/books/', book.book_id, 'view']" class="btn btn-info">View</a>
         </td>
       </tr>
     </tbody>

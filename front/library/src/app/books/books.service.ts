@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-   
 import {  Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-    
 import { books } from './books';
      
 @Injectable({
@@ -23,7 +21,7 @@ export class booksService {
      
   getAll(): Observable<any> {
 
-    return this.httpClient.get(this.apiURL + '/books/get')
+    return this.httpClient.get(this.apiURL + '/Books/get')
     .pipe(
       catchError(this.errorHandler)
     )
@@ -32,7 +30,7 @@ export class booksService {
      
   find(book:books): Observable<any> {
 
-    return this.httpClient.post(this.apiURL + '/books/getByFilter/', JSON.stringify(book), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/Books/getByFilter/', JSON.stringify(book), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
